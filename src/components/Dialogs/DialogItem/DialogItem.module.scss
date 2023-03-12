@@ -1,0 +1,17 @@
+@import '../../../assets/styles/colors';
+
+.dialog {
+  padding: 5px 0;
+
+  a {
+    color: white;
+
+    &:hover {
+      color: $secondaryColorL;
+    }
+
+    &.activeLink {
+      color: $secondaryColorL;
+    }
+  }
+}

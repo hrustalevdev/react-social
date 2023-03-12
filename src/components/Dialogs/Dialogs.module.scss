@@ -1,0 +1,9 @@
+.dialogs {
+  display: grid;
+  grid-template-columns: 2fr 10fr;
+  gap: 10px;
+
+  .dialogsItems {
+    font-size: 1.1rem;
+  }
+}

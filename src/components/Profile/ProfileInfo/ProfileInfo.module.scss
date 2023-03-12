@@ -1,0 +1,192 @@
+@import '../../../assets/styles/colors';
+
+.profileInfoWrapper .profileInfoTop {
+  width: 102.6%;
+  height: 200px;
+  position: relative;
+  top: -10px;
+  left: -10px;
+  background: url('/assets/images/profileInfoBg.jpg') no-repeat;
+  background-position-y: -110px;
+  background-size: 785px;
+}
+
+.descriptionTop {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 5px;
+  min-height: 60px;
+  margin: -10px -10px 0 -10px;
+  padding: 5px 150px;
+  position: relative;
+  background-color: $mainColorL;
+
+  .avatarContainer {
+    width: 120px;
+    height: 120px;
+    position: absolute;
+    top: -60px;
+    left: 25px;
+
+    img.avatar {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      background-color: $secondaryColorL;
+      border: 5px solid $mainColorL;
+      border-radius: 50%;
+    }
+
+    label.refreshPhoto {
+      width: 20px;
+      height: 20px;
+      position: absolute;
+      bottom: 11px;
+      left: 12px;
+      background-color: white;
+      border: 1px solid white;
+      border-radius: 50%;
+      cursor: pointer;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        rotation: 0;
+        transition: transform .3s;
+
+        &:hover {
+          transform: rotate(-90deg);
+        }
+      }
+
+      input[type=file] {
+        outline: 0;
+        opacity: 0;
+        pointer-events: none;
+        user-select: none
+      }
+    }
+  }
+
+  .fullNameContainer {
+    font-size: 2.5rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    line-height: .9;
+
+    &:first-letter {
+      font-weight: bold;
+    }
+  }
+
+  div.status {
+    position: relative;
+    padding: 5px;
+    background-color: #FFBA00;
+    border-radius: 3px;
+    box-shadow: 1px 1px 3px black;
+
+    &:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -11px;
+      width: 0;
+      height: 0;
+      border: 7px solid;
+      border-color: #FFBA00 #FFBA00 transparent transparent;
+    }
+  }
+}
+
+.descriptionBottomWrapper {
+  overflow: hidden;
+  margin: 0 -10px;
+  padding-bottom: 2px;
+
+  .profileDataWrapper {
+    background-color: $mainColorL;
+    box-shadow: 0 1px 2px -.5px black;
+    padding: 10px 10px 15px 10px;
+
+    .profileData {
+      display: flex;
+      justify-content: space-evenly;
+      gap: 11%;
+
+      .profileDataHeaders {
+        display: flex;
+        justify-content: center;
+        font-size: 1.2rem;
+        text-transform: uppercase;
+        border-bottom: 2px solid white;
+        margin-bottom: 5px;
+        padding-bottom: 5px;
+
+        span:first-letter {
+          font-weight: bold;
+        }
+      }
+
+      .profileDataBlock {
+        width: 38%;
+        border-radius: 5px;
+        line-height: 1.5rem;
+
+        .blockData {
+          display: flex;
+          justify-content: space-between;
+          font-size: 1.1rem;
+          margin-top: 12px;
+          padding: 0 10px;
+        }
+
+        .blockDataDescription {
+          font-size: 1.1rem;
+          margin-top: 10px;
+          padding: 0 10px;
+
+          .blockUnitDescription {
+            font-size: 1.1rem;
+            padding-left: 10px;
+          }
+        }
+
+        .blockUnitTitle {
+          color: $secondaryColor;
+          text-transform: lowercase;
+          text-shadow: 1px 1px 2px black;
+        }
+
+        .blockUnitValue {
+          width: 60%;
+          align-items: start;
+          font-size: 1.2rem;
+        }
+
+        .blockUnitValue input {
+          height: auto;
+          margin-top: 0;
+          padding: 0 5px;
+        }
+
+        .blockUnitDescription textarea {
+          width: 95%;
+          height: auto;
+          margin-top: 0;
+          padding: 0 5px;
+        }
+      }
+    }
+
+    .buttonWrapper {
+      padding: 10px 0 5px 10px;
+
+      button {
+        width: 55px;
+      }
+    }
+  }
+}
